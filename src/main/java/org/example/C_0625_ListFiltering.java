@@ -1,6 +1,5 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -20,10 +19,8 @@ public class C_0625_ListFiltering {
     }
 
     private static List<Object> filterList(List<Object> input) {
-        List<Object> result = new ArrayList<>();
-        input.stream()
+        return input.stream()
                 .filter(item -> item instanceof Integer)
-                .forEach(result::add);
-        return result;
+                .toList();
     }
 }
